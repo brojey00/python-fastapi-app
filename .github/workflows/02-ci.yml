@@ -16,7 +16,7 @@ jobs:
           python-version: "3.13"
 
       - name: Installer les dépendances
-        run: pip install -r requirements-dev.txt
+        run: pip install -r requirements-dev.txt -r requirements-dev.txt
 
       - name: Vérifier le style
         run: ruff check .
@@ -44,7 +44,7 @@ jobs:
 
   test:
     name: Test – Pytest
-    needs: [lint, build]
+    needs: [lint, build]d
     runs-on: ubuntu-latest
     steps:
       - name: Récupérer le code
@@ -56,7 +56,7 @@ jobs:
           python-version: "3.13"
 
       - name: Installer les dépendances
-        run: pip install -r requirements-dev.txt
+        run: pip install -r requirements-dev.txt -r requirements-dev.txt
 
       - name: Lancer les tests
         run: pytest
