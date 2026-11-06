@@ -34,7 +34,7 @@ joShowing runs from all workflowsbs:
           echo "OS runner   : ${{ runner.os }}"
           echo "head_ref    : ${{ github.head_ref }}"
           echo "base_ref    : ${{ github.base_ref }}"
-          echo '${{ toJson(github) }}'
+          echo "${{ toJson(github) }}" 
 
   build:
     name: Build – Vérifier l'application
