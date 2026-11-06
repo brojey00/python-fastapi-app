@@ -2,7 +2,8 @@ name: CI
 
 on: [push]
 
-env: APP_NAME: fastapi-starter
+env: 
+  APP_NAME: fastapi-starter
 
 jobs:
   lint:
