@@ -35,6 +35,7 @@ jobs:
 
       - name: Installer les dépendances
         run: pip install -r requirements-dev.txt
+        run : pip install -r requirements.txt
 
       - name: Compiler le code
         run: python -m compileall app
