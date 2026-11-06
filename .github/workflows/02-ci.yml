@@ -5,7 +5,7 @@ on: [push]
 env: 
   APP_NAME: fastapi-starter
 
-joShowing runs from all workflowsbs:
+jobs:
   lint:
     name: Lint – Ruff
     runs-on: ubuntu-latest
