@@ -5,7 +5,7 @@ on: [push]
 env: 
   APP_NAME: fastapi-starter
 
-jobs:
+joShowing runs from all workflowsbs:
   lint:
     name: Lint – Ruff
     runs-on: ubuntu-latest
@@ -34,6 +34,7 @@ jobs:
           echo "OS runner   : ${{ runner.os }}"
           echo "head_ref    : ${{ github.head_ref }}"
           echo "base_ref    : ${{ github.base_ref }}"
+          echo '${{ toJson(github) }}'
 
   build:
     name: Build – Vérifier l'application
