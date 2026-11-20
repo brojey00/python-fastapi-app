@@ -6,6 +6,7 @@ on:
     paths: ["app/**","src/**"]
   pull_request:
     types: ["opened","synchronize"]
+    
 jobs:
   hello:
     runs-on: ubuntu-latest
