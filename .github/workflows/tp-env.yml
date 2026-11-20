@@ -11,6 +11,10 @@ on:
       version:
         description: "Version à déployer"
         default: "1.0.0"
+      debug:
+        description: "Activer le mode debug"
+        type: boolean
+        default: false
       
 
 jobs:
@@ -26,11 +30,15 @@ jobs:
 
       - name: Print environment variables
         run: echo "Application $APP_NAME built on $BUILD_DATE"
-        
+
       - name: Print deployment inputs
         run: |
           echo "Environment: ${{ inputs.environment }}"
           echo "Version: ${{ inputs.version }}"
+       
+      - name: Print debug information
+        if: ${{ inputs.debug }}
+        run: echo "Debug mode is ON "
   verify-env:
     runs-on: ubuntu-latest
     steps:
