@@ -2,11 +2,14 @@ name: Filtres
 
 on:
   push:
+
     branches: ["main", "feature/**"]
     paths: ["app/**", "tests/**"]
 
   pull_request:
     types: ["opened", "synchronize"]
+
+    
 
 jobs:
   hello:

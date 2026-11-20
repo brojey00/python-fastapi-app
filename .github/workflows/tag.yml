@@ -2,11 +2,13 @@ name: Tags
 
 on:
   push:
-    tags:
-      - 'v*'
+    tags: [ "v*"]
+    
 
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
+
       - run: echo "Nouveau tag détecté !"
+
